@@ -17,12 +17,14 @@ function palindrome(str) {
     // return rev3 === str
 
     // solution 3
-    let rev2 = ""
-    for(let char of str){
-      rev2 = char + rev2
-    } 
-    return rev2 === str
+    // let rev2 = ""
+    // for(let char of str){
+    //   rev2 = char + rev2
+    // } 
+    // return rev2 === str
 
+    // solution 4
+    return str.split("").every((char, i) => char === str[str.length -i -1])
 }
 
 module.exports = palindrome;
