@@ -17,6 +17,38 @@
 //       '### '
 //       '####'
 
-function steps(n) {}
+function steps(n, row = 0, stair = "") {
+    // recursion solution
+        
+            if(n === row) {
+                return;
+            }
+            if(stair.length === n) {
+                console.log(stair)
+               return steps(n, row + 1)
+            }
+            if ( stair.length <= row) {
+               stair += "#" 
+            } else {
+                stair += " "
+            }
+            steps(n, row, stair)
+
+
+        // solution 2
+    // for (row = 0; row < n; row++) {
+    //     let steps = ""
+    //     for (col = 0; col < n; col++) {
+    //         if (col <= row) {
+    //             steps += "#"
+    //         }
+    //         else {
+    //             steps += " "
+    //         }
+    //     }
+    //     console.log(steps)
+    // }
+
+}
 
 module.exports = steps;
