@@ -27,12 +27,15 @@ function steps(n, row = 0, stair = "") {
                 console.log(stair)
                return steps(n, row + 1)
             }
-            if ( stair.length <= row) {
-               stair += "#" 
-            } else {
-                stair += " "
-            }
-            steps(n, row, stair)
+            // if ( stair.length <= row) {
+            //    stair += "#" 
+            // } else {
+            //     stair += " "
+            // }
+            //  or 
+            const add = stair.length <= row ? "#" :" ";
+            // stair.length <= row ? stair += "#" : stair +=" "
+            steps(n, row, stair + add)
 
 
         // solution 2
